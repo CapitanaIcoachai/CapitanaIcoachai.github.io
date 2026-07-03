@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local-first AI + ESP32 tools</title>
+<meta name="description" content="Small, hackable, dependency-free tools for local AI (Ollama) and ESP32 hardware.">
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--wire:#30363d;--ink:#e6edf3;--muted:#8b949e;--gold:#d29922;--blue:#58a6ff;--green:#3fb950}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:820px;margin:0 auto;padding:56px 20px 80px}
+  header{text-align:center;margin-bottom:48px}
+  h1{font-size:34px;font-weight:800;letter-spacing:-.5px}
+  h1 .g{color:var(--gold)}
+  .sub{color:var(--muted);font-size:17px;margin-top:12px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:40px 0 16px;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+  a.card{display:block;background:var(--card);border:1px solid var(--wire);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+  a.card:hover{border-color:var(--blue);transform:translateY(-2px)}
+  a.card .n{font-weight:700;font-size:15px}
+  a.card .d{color:var(--muted);font-size:13.5px;margin-top:4px}
+  .lead{color:var(--muted);font-size:15.5px;max-width:640px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+  .btn-gold{background:var(--gold);color:#0d1117}
+  .btn-ghost{border:1.5px solid var(--wire);color:var(--ink)}
+  .social{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px}
+  .social a{color:var(--muted);text-decoration:none;font-size:14px}
+  .social a:hover{color:var(--ink)}
+  footer{margin-top:56px;color:var(--muted);font-size:12.5px;text-align:center;border-top:1px solid var(--wire);padding-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Local-first <span class="g">AI</span> + ESP32 tools</h1>
+    <p class="sub">Small, hackable, dependency-free building blocks — readable in one sitting.</p>
+  </header>
+
+  <h2>Local AI · Python · Ollama</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/CapitanaIcoachai/sqlite-memory"><div class="n">sqlite-memory</div><div class="d">persistent long-term memory for local LLMs — one file, no vector DB</div></a>
+    <a class="card" href="https://github.com/CapitanaIcoachai/sqlite-rag"><div class="n">sqlite-rag</div><div class="d">minimal RAG: embeddings + cosine in SQLite, stdlib only</div></a>
+    <a class="card" href="https://github.com/CapitanaIcoachai/ollama-doctor"><div class="n">ollama-doctor</div><div class="d">find out why Ollama is slow (CPU offload / VRAM)</div></a>
+    <a class="card" href="https://github.com/CapitanaIcoachai/local-voice-edge"><div class="n">local-voice-edge</div><div class="d">ESP32 voice assistant + local STT→LLM→TTS server</div></a>
+  </div>
+
+  <h2>ESP32 · Displays · LVGL</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/CapitanaIcoachai/axs15231b-landscape-lvgl"><div class="n">axs15231b-landscape-lvgl</div><div class="d">3.5" AXS15231B QSPI panel in landscape with LVGL</div></a>
+    <a class="card" href="https://github.com/CapitanaIcoachai/guition-esp32p4-lvgl9"><div class="n">guition-esp32p4-lvgl9</div><div class="d">Guition 7" ESP32-P4 + LVGL 9 baseline (+ build fixes)</div></a>
+  </div>
+
+  <h2>3D printing</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/CapitanaIcoachai/orcaslicer-cli-cookbook"><div class="n">orcaslicer-cli-cookbook</div><div class="d">OrcaSlicer from the command line + undocumented fixes</div></a>
+  </div>
+
+  <h2>What is this</h2>
+  <p class="lead">A one-person workshop building an ecosystem where local AI meets real hardware: private, offline-first assistants running on cheap boards, plus the sensors and enclosures around them. These open-source pieces are the building blocks — free, MIT, and extracted straight from the real thing.</p>
+
+  <h2>Support the work</h2>
+  <p class="lead">If any of these saved you time, the best free help is a ⭐ on the repos. If you'd like to back the project directly:</p>
+  <div class="btns">
+    <a class="btn btn-gold" href="https://buy.stripe.com/3cI7sN50k55V5gF6OjeAg08">💛 Support the project</a>
+    <a class="btn btn-ghost" href="https://github.com/CapitanaIcoachai">⭐ Star the repos</a>
+  </div>
+
+  <h2>Follow</h2>
+  <div class="social">
+    <a href="https://www.youtube.com/@user-fo6dk9hl4m">YouTube</a>
+    <a href="https://www.instagram.com/my.coach_ai/">Instagram</a>
+    <a href="https://www.tiktok.com/@mycoach.ai">TikTok</a>
+    <a href="https://x.com/coach_ai76407">X</a>
+    <a href="https://t.me/capitanai_coachbot">Telegram</a>
+  </div>
+
+  <footer>MIT-licensed open source · built in the open · © 2026</footer>
+</div>
+</body>
+</html>
